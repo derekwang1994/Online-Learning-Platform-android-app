@@ -98,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
             dialog.setIndeterminate(true);
             dialog.show();
             studentFlag1 = true;
-            auth.signInWithEmailAndPassword(/*emailEditText.getText().toString()*/"karthik@mail.com", "k26616495"/*passwordEditText.getText().toString()*/)
+            auth.signInWithEmailAndPassword(emailEditText.getText().toString(), passwordEditText.getText().toString())
                     .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
                         public void onSuccess(AuthResult authResult) {
@@ -176,7 +176,7 @@ public class LoginActivity extends AppCompatActivity {
             dialog.setIndeterminate(true);
             dialog.show();
             teacherFlag1 = true;
-        auth.signInWithEmailAndPassword("eskafif@scu.edu"/*emailEditText.getText().toString()*/,/*passwordEditText.getText().toString()*/"mobileapp")
+        auth.signInWithEmailAndPassword(emailEditText.getText().toString(),passwordEditText.getText().toString())
                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {

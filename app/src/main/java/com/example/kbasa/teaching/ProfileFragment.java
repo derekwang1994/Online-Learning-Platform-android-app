@@ -76,7 +76,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        DatabaseReference courseDB = FirebaseDatabase.getInstance().getReference("Teacher").child(auth.getUid());
+        DatabaseReference courseDB = FirebaseDatabase.getInstance().getReference("Teacher").child(FirebaseAuth.getInstance().getUid());
         courseDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -93,7 +93,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        DatabaseReference studentDB = FirebaseDatabase.getInstance().getReference("Student").child(auth.getUid());
+        DatabaseReference studentDB = FirebaseDatabase.getInstance().getReference("Student").child(FirebaseAuth.getInstance().getUid());
         studentDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
